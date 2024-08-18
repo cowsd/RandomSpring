@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA4C8CC92C72155D009E8392 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C8CC82C72155D009E8392 /* Animation.swift */; };
+		FA4C8CCB2C7216BB009E8392 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C8CCA2C7216BB009E8392 /* DataStore.swift */; };
 		FA74D71F2C71E96C0054DE55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA74D71E2C71E96C0054DE55 /* AppDelegate.swift */; };
 		FA74D7212C71E96C0054DE55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA74D7202C71E96C0054DE55 /* SceneDelegate.swift */; };
 		FA74D7232C71E96C0054DE55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA74D7222C71E96C0054DE55 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA4C8CC82C72155D009E8392 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		FA4C8CCA2C7216BB009E8392 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		FA74D71B2C71E96C0054DE55 /* RandomSpring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomSpring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA74D71E2C71E96C0054DE55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA74D7202C71E96C0054DE55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA4C8CCC2C7240A0009E8392 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA74D72C2C71E96E0054DE55 /* Info.plist */,
+				FA74D71E2C71E96C0054DE55 /* AppDelegate.swift */,
+				FA74D7202C71E96C0054DE55 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FA4C8CCD2C7240E3009E8392 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA74D7222C71E96C0054DE55 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA4C8CCE2C7240FF009E8392 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA74D7242C71E96C0054DE55 /* Main.storyboard */,
+				FA74D7292C71E96E0054DE55 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA4C8CCF2C72411C009E8392 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C8CC82C72155D009E8392 /* Animation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA4C8CD02C72412C009E8392 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C8CCA2C7216BB009E8392 /* DataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		FA74D7122C71E96C0054DE55 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +105,12 @@
 		FA74D71D2C71E96C0054DE55 /* RandomSpring */ = {
 			isa = PBXGroup;
 			children = (
-				FA74D71E2C71E96C0054DE55 /* AppDelegate.swift */,
-				FA74D7202C71E96C0054DE55 /* SceneDelegate.swift */,
-				FA74D7222C71E96C0054DE55 /* ViewController.swift */,
-				FA74D7242C71E96C0054DE55 /* Main.storyboard */,
+				FA4C8CCC2C7240A0009E8392 /* App */,
+				FA4C8CCD2C7240E3009E8392 /* ViewControllers */,
+				FA4C8CCE2C7240FF009E8392 /* Storyboards */,
+				FA4C8CCF2C72411C009E8392 /* Models */,
+				FA4C8CD02C72412C009E8392 /* Services */,
 				FA74D7272C71E96E0054DE55 /* Assets.xcassets */,
-				FA74D7292C71E96E0054DE55 /* LaunchScreen.storyboard */,
-				FA74D72C2C71E96E0054DE55 /* Info.plist */,
 			);
 			path = RandomSpring;
 			sourceTree = "<group>";
@@ -148,7 +194,9 @@
 			files = (
 				FA74D7232C71E96C0054DE55 /* ViewController.swift in Sources */,
 				FA74D71F2C71E96C0054DE55 /* AppDelegate.swift in Sources */,
+				FA4C8CCB2C7216BB009E8392 /* DataStore.swift in Sources */,
 				FA74D7212C71E96C0054DE55 /* SceneDelegate.swift in Sources */,
+				FA4C8CC92C72155D009E8392 /* Animation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +350,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8JL9UA833T;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomSpring/Info.plist;
+				INFOPLIST_FILE = RandomSpring/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -334,7 +382,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8JL9UA833T;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomSpring/Info.plist;
+				INFOPLIST_FILE = RandomSpring/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
