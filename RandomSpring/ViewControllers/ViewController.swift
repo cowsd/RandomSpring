@@ -9,7 +9,7 @@ import UIKit
 import SpringAnimation
 
 final class ViewController: UIViewController {
-
+    
     @IBOutlet weak var animationView: SpringView!
     
     @IBOutlet weak var presetLabel: UILabel!
@@ -30,7 +30,6 @@ final class ViewController: UIViewController {
         currentAnimation = Animation.getRandomAnimation()
         setLabels()
     }
-
     
     @IBAction func startAnimation(_ sender: SpringButton) {
         performAnimation()
@@ -47,7 +46,7 @@ final class ViewController: UIViewController {
         forceLabel.text = String(format: "%.2f", currentAnimation.force)
         durationLabel.text = String(format: "%.2f", currentAnimation.duration)
         velocityLabel.text = String(format: "%.2f", currentAnimation.velocity)
-
+        
     }
     
     private func performAnimation() {

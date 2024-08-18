@@ -27,6 +27,6 @@ struct Animation {
             velocity: velocity
         )
     }
-
+    
     
 }
