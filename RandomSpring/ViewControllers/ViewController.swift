@@ -18,8 +18,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var velocityLabel: UILabel!
     
-    var currentAnimation: Animation!
-    var nextAnimation: Animation!
+    private var animation = Animation.getRandomAnimation()
     
     override func viewWillLayoutSubviews() {
         animationView.layer.cornerRadius = animationView.frame.width / 2
@@ -27,34 +26,32 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentAnimation = Animation.getRandomAnimation()
         setLabels()
     }
     
     @IBAction func startAnimation(_ sender: SpringButton) {
         performAnimation()
         setLabels()
-        
-        nextAnimation = Animation.getRandomAnimation()
-        sender.setTitle("\(nextAnimation.preset)", for: .normal)
-        currentAnimation = nextAnimation
+        animation = Animation.getRandomAnimation()
+        sender.setTitle("Run \(animation.preset)", for: .normal)
+    
     }
     
     private func setLabels() {
-        presetLabel.text = currentAnimation.preset
-        curveLabel.text = currentAnimation.curve
-        forceLabel.text = String(format: "%.2f", currentAnimation.force)
-        durationLabel.text = String(format: "%.2f", currentAnimation.duration)
-        velocityLabel.text = String(format: "%.2f", currentAnimation.velocity)
+        presetLabel.text = animation.preset
+        curveLabel.text = animation.curve
+        forceLabel.text = String(format: "%.2f", animation.force)
+        durationLabel.text = String(format: "%.2f", animation.duration)
+        velocityLabel.text = String(format: "%.2f", animation.velocity)
         
     }
     
     private func performAnimation() {
-        animationView.animation = currentAnimation.preset
-        animationView.curve = currentAnimation.curve
-        animationView.force = currentAnimation.force
-        animationView.duration = currentAnimation.duration
-        animationView.velocity = currentAnimation.velocity
+        animationView.animation = animation.preset
+        animationView.curve = animation.curve
+        animationView.force = animation.force
+        animationView.duration = animation.duration
+        animationView.velocity = animation.velocity
         animationView.animate()
     }
     

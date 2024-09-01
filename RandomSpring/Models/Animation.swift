@@ -13,8 +13,8 @@ struct Animation {
     let velocity: Double
     
     static func getRandomAnimation() -> Animation {
-        let preset = DataStore.shared.presets.randomElement() ?? "pop"
-        let curve = DataStore.shared.curves.randomElement() ?? "linear"
+        let preset = DataStore.shared.presets.randomElement()?.rawValue ?? "wobble"
+        let curve = DataStore.shared.curves.randomElement()?.rawValue ?? "easeIn"
         let force = Double.random(in: 1.0...2.5)
         let duration = Double.random(in: 0.5...3.0)
         let velocity = Double.random(in: 0.0...1.0)
